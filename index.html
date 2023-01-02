@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const getAdder = function () { 
+      let res = 0; 
+        return function(x) { 
+            res += x; return res; 
+        } 
+    };
+
+    const sum = getAdder();
+    sum(1); // 1
+    sum(3); // 4
+    const sum2 = getAdder(); 
+    sum2(1); //1
+    sum2(3); // 4
+    </script>
+</body>
+</html>
